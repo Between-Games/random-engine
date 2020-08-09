@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/S-A-R-C/random-engine/issues"
   },
-  "homepage": "https://github.com/S-A-R-C/random-engine#readme"
+  "homepage": "https://github.com/S-A-R-C/random-engine#readme",
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0"
+  }
 }
