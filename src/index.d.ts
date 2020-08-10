@@ -1,4 +1,7 @@
-declare module 'random-engine' {
-    export function returnTrue(): boolean;
-    export function returnFalse(): boolean;
+export function getRandomBit(): number;
+export function getRandomNumber(digitCount?: number): number;
+
+declare module 'RandomEngine' {
+    export function getRandomBit(): number;
+    export function getRandomNumber(digitCount?: number): number;
 }

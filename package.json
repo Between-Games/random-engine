@@ -1,8 +1,10 @@
 {
-  "name": "@change/utility-engine",
+  "name": "@change/random-engine",
   "version": "0.1.0",
   "description": "A collection of JavaScript random functionalities",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "npx mocha",
     "build": "npx webpack --watch",
@@ -27,5 +29,8 @@
     "mocha": "^8.1.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@sarc-test/utility-engine": "^0.2.4"
   }
 }
