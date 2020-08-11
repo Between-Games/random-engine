@@ -31,7 +31,7 @@ const expect = chai.expect;
 
 const randomBits = [];
 
-while(randomBits.length < 1000) randomBits.push(RandomEngine.getRandomBit());
+while(randomBits.length < 100000) randomBits.push(RandomEngine.getRandomBit());
 
 // ╔══════╗ ╔═══════╗╔═══════╗
 // ║ ╔══╗ ║ ╚══╗ ╔══╝╚══╗ ╔══╝

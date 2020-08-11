@@ -2,6 +2,8 @@ export function getRandomBit(): number;
 
 export function getRandomDigit(): number;
 
+export function getRandomBoolean(): number;
+
 export function getRandomElement(value: Array<any>): any;
 
 export function getRandomLetter(letterCount: number): string;
@@ -12,6 +14,8 @@ declare module 'RandomEngine' {
     export function getRandomBit(): number;
 
     export function getRandomDigit(): number;
+
+    export function getRandomBoolean(): number;
 
     export function getRandomElement(value: Array<any>): any;
 

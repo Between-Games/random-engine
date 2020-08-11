@@ -47,6 +47,17 @@ export function getRandomDigit() {  // Get random digit based on the Math.random
     return getRandomInteger(0, 9);  // Get random digit based on the Math.random function
 }
 
+// ╔══════╗ ╔═══════╗╔═══════╗╔═╗      ╔═══════╗╔═══════╗╔════╗╔═╗
+// ║ ╔══╗ ║ ║ ╔═══╗ ║║ ╔═══╗ ║║ ║      ║ ╔═════╝║ ╔═══╗ ║║ ╔╗ ║║ ║
+// ║ ╚══╝ ╚╗║ ║   ║ ║║ ║   ║ ║║ ║      ║ ╚═════╗║ ╚═══╝ ║║ ║║ ║║ ║
+// ║ ╔═══╗ ║║ ║   ║ ║║ ║   ║ ║║ ║      ║ ╔═════╝║ ╔═══╗ ║║ ║║ ║║ ║
+// ║ ╚═══╝ ║║ ╚═══╝ ║║ ╚═══╝ ║║ ╚═════╗║ ╚═════╗║ ║   ║ ║║ ║║ ╚╝ ║
+// ╚═══════╝╚═══════╝╚═══════╝╚═══════╝╚═══════╝╚═╝   ╚═╝╚═╝╚════╝
+
+export function getRandomBoolean() {    //
+    return Math.random() < 0.5;         //
+}
+
 // ╔═══════╗╔═══════╗╔═══════╗╔═══════╗╔═╗   ╔═╗
 // ║ ╔═══╗ ║║ ╔═══╗ ║║ ╔═══╗ ║║ ╔═══╗ ║║ ║   ║ ║
 // ║ ╚═══╝ ║║ ╚═══╝ ║║ ╚═══╝ ║║ ╚═══╝ ║║ ╚═══╝ ║
@@ -110,6 +121,8 @@ export default {
     getRandomBit,
 
     getRandomDigit,
+
+    getRandomBoolean,
 
     getRandomElement,
 
