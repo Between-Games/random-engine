@@ -16,6 +16,15 @@
 
 import UtilityEngine from '@sarc-test/utility-engine';
 
+// ╔═══════╗╔═══════╗╔═══════╗╔═╗      ╔═══════╗╔═══════╗╔═══════╗
+// ╚╗ ╔══╗ ║║ ╔═════╝║ ╔═════╝║ ║      ║ ╔═══╗ ║║ ╔═══╗ ║║ ╔═════╝
+//  ║ ║  ║ ║║ ╚═════╗║ ║      ║ ║      ║ ╚═══╝ ║║ ╚═══╝ ║║ ╚═════╗
+//  ║ ║  ║ ║║ ╔═════╝║ ║      ║ ║      ║ ╔═══╗ ║║ ╔═╗ ╔═╝║ ╔═════╝
+// ╔╝ ╚══╝ ║║ ╚═════╗║ ╚═════╗║ ╚═════╗║ ║   ║ ║║ ║ ║ ╚═╗║ ╚═════╗
+// ╚═══════╝╚═══════╝╚═══════╝╚═══════╝╚═╝   ╚═╝╚═╝ ╚═══╝╚═══════╝
+
+const _letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+
 // ╔══════╗ ╔═══════╗╔═══════╗
 // ║ ╔══╗ ║ ╚══╗ ╔══╝╚══╗ ╔══╝
 // ║ ╚══╝ ╚╗   ║ ║      ║ ║
@@ -69,6 +78,27 @@ export function getRandomInteger(minimum, maximum) {                            
     } else return Math.round(Math.random() * (maximum - minimum)) + minimum;                            //
 }
 
+// ╔═╗      ╔═══════╗╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+// ║ ║      ║ ╔═════╝╚══╗ ╔══╝╚══╗ ╔══╝║ ╔═════╝║ ╔═══╗ ║
+// ║ ║      ║ ╚═════╗   ║ ║      ║ ║   ║ ╚═════╗║ ╚═══╝ ║
+// ║ ║      ║ ╔═════╝   ║ ║      ║ ║   ║ ╔═════╝║ ╔═╗ ╔═╝
+// ║ ╚═════╗║ ╚═════╗   ║ ║      ║ ║   ║ ╚═════╗║ ║ ║ ╚═╗
+// ╚═══════╝╚═══════╝   ╚═╝      ╚═╝   ╚═══════╝╚═╝ ╚═══╝
+
+export function getRandomLetter(letterCount = 1) {                                      //
+    if (!UtilityEngine.isInteger(letterCount, 0, Number.MAX_SAFE_INTEGER)) {            //
+        throw TypeError('The letter count parameter must be a positive safe integer');  //
+    }
+
+    let randomLetters = '';
+
+    while (randomLetters.length < letterCount) {
+        randomLetters += getRandomElement(_letters);
+    }
+
+    return randomLetters;
+}
+
 // ╔═══════╗╔════╗╔═╗╔═══════╗╔═══════╗╔═══════╗╔═══════╗
 // ║ ╔═════╝╚══╗ ║║ ║║ ╔═══╗ ║║ ╔═══╗ ║║ ╔═══╗ ║╚══╗ ╔══╝
 // ║ ╚═════╗╔══╝ ╚╝ ║║ ╚═══╝ ║║ ║   ║ ║║ ╚═══╝ ║   ║ ║
@@ -81,5 +111,9 @@ export default {
 
     getRandomDigit,
 
+    getRandomElement,
+
     getRandomInteger,
+
+    getRandomLetter,
 }
